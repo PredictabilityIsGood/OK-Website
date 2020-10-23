@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ryan Montgomery">
+    <title>OceanView Kiawah</title>
+
+    <meta property="og:title" content="The Next Destination" />
+    <meta property="og:image" content="https://oceanviewkiawah.com/assets/media/villa-banner.jpg" />
+    <link rel="icon" href="/favicon.ico">
+
+    <!--#include virtual="assets/includes/main-links.html" -->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link href="/assets/css/carousel.css" rel="stylesheet">
+    <link href="/assets/css/theme.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    
+    <style>
+      @media (max-height:4000px){
+        #myCarousel .carousel-item{
+          min-height:415px!important;
+        }
+      }
+      @media (max-height:414px){
+        #myCarousel .carousel-item{
+          min-height:414px!important;
+        }
+      }
+      @media (max-height:375px){
+        #myCarousel .carousel-item{
+          min-height:375px!important;
+        }
+      }
+      @media (max-height:320px){
+        #myCarousel .carousel-item{
+          min-height:320px !important;
+        }
+      }
+      
+      
+      
+    </style>
+</head>
+<body class="text-oceanview-primary">
+<header id="header-frame">
+  <nav id="header-nav" class="navbar navbar-expand-md navbar-light fixed-top bg-oceanview nav-oceanview">
+    <a class="navbar-brand lead skinny" href="/">OceanView <small class="ml-2 smaller">Pristine Villa Experiences</small></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">experience</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/about">journey<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/booking">booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    function toggleDetails(){
+      $("#villa-details").fadeToggle();
+      $("#geo-details").fadeToggle();
+    }
+    $(function(){
+      $("#geo-details").fadeOut();
+      $(".popout-img").on("click",function(event){
+        $(this).toggleClass("active");
+
+        var picture = $(this).find("img")[0];
+        !$(this).hasClass("active") ? $(picture).attr("style","") : $(picture).attr("style","margin-top:-"+$(picture).height()/2+"px;margin-left:-"+$(picture).width()/2+"px;");
+      })
+      $(".tile-image").on("click",function(){
+        $(this).find(".extra-information").toggleClass("extra-information-active");
+      })
+
+    });
+    $(window).resize(function(){
+    });
+  </script>
+</header>
+
+
+<main role="main">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="9"></li>
+      <li data-target="#myCarousel" data-slide-to="10"></li>
+      <li data-target="#myCarousel" data-slide-to="11"></li>
+    </ol>
+    <div class="carousel-inner h-100">
+      <div id="atrium-img" class="cover carousel-item h-100 active">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="first-living-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="twin-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>NW Bed</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="jacuzzi-bedroom-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>SW Bed</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="pool-jacuzzi-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Jacuzzi & Pool</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="southeast-bedroom-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>SE Bed</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="northeast-bedroom-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>NE Bed</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="dining-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-center">
+            <h1>Dining</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="master-bedroom-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-center">
+            <h1>Master</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="master-bath-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-center">
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="master-bath-2-img" class="cover carousel-item h-100">
+          <div class="container">
+            <div class="carousel-caption text-center">
+              <h1></h1>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      <div id="master-dresser-img" class="cover carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-center">
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="master-study-img" class="carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-center">
+            <h1>Study</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div id="villa-details" class="container marketing">
+
+     <div class="row featurette ml-2 mb-4">
+      <div class="col-sm-10">
+        <h2 class="featurette-heading mt-2">Letter from the <span class="text-muted">Family.</span></h2>
+        <p style="font-style:italic;font-size:1.2em;">our personal welcome.</p>
+      </div>
+      <div class="col-sm-2 text-right text-muted">
+          area details
+          <button onclick="toggleDetails()" style="border-width:1.5px;" type="button" class="btn btn-lg btn-outline-secondary ml-2 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+          </button>
+        </div>
+    </div>
+
+    <div class="row m-4">
+      <div class="col-sm pl-4 pr-4 pt-4 pb-1 text-content text-left">
+        <p>Welcome to our perfect Kiawah Island Oceanfront home! This beautiful oceanfront villa is within the exclusive Vanderhorst Plantation neighborhood and has terrific golf, beach and ocean views from all floors. This oceanfront property offers large porches and decks with 5,300 square feet of interior space with three floors easily accessible via the home’s elevator.</p>
+        <p>The first floor welcomes you, accessed through a winding drive through magnificent oak, magnolia trees and assorted plantings. The circular steps lead to a large entry foyer, which offers guests views through the beautifully appointed Family room to the ocean beyond.</p>
+      </div>
+    </div>
+
+    <div class="row m-4 text-content" >
+      <div class="one cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Beautiful Views
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right w-100">x</div>
+          <p class="lead lead-smaller">
+          "...terrific golf, beach and ocean views from all floors..."
+          </p>
+        </div>
+      </div>
+      <div class="two cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Inviting Entrance
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p class='lead lead-smaller'>
+          "...accessed through a winding drive through magnificent oak, magnolia trees and assorted plantings. The circular steps lead to a large entry foyer..."
+          </p>
+        </div>
+      </div>
+      <div class="three cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Foyer
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p>
+            "...circular steps lead to a large entry foyer..."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row m-4">
+      <div class="col-sm pl-4 pr-4 pt-4 pb-1 text-content text-left">
+        <p>The covered first floor back porch has a built in jacuzzi and pool, along with a comfortable array of lounging areas. The deck area showcases the golf course and ocean views and has a direct side access to the public access walkway which leads to the wide sandy beach minutes away. On the first floor you have four of the bedrooms including two (2) oceanfront suites provided with a King and a Queen bed accommodations. All of the bedrooms on this level boast great ocean and magnificent estate views with en suite bathrooms. Separating the bedrooms is a well apportioned family room with coffered ceilings, a magnificent granite accented fire place as well as built in bookshelves with over 100 books from a diverse group of authors. It has an adjoining kitchenette with a refrigerator, countertop and storage for those afternoon snacks by the pool. In addition it also offers a laundry room on the floor. </p>
+      </div>
+    </div>
+    <div class="row m-4 text-content" >
+      <div class="four cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Jacuzzi & Pool
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right w-100">x</div>
+          <p class="lead lead-smaller">
+          "...first floor back porch has a built in jacuzzi and pool, along with a comfortable array of lounging areas..."
+          </p>
+        </div>
+      </div>
+      <div class="five cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Course Views
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p class='lead lead-smaller'>
+          "...accessed through a winding drive through magnificent oak, magnolia trees and assorted plantings. The circular steps lead to a large entry foyer..."
+          </p>
+        </div>
+      </div>
+      <div class="six cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Birds Eye View
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p>
+            "...direct side access to the public access walkway which leads to the wide sandy beach minutes away..."
+          </p>
+        </div>
+      </div>
+    </div>
+
+      <div class="row m-4">
+      <div class="col-sm pl-4 pr-4 pt-4 pb-1 text-content text-left">
+        <p>When one ventures up the Foyer stairs or rides up the elevator they find themselves in an exquisite formal living area. The second floor provides a well appointed kitchen with stainless steel appliances, including a Bosch dishwasher, a Sub-Zero refrigerator, Thermador double ovens, and a six-burner range with griddle and microwave oven. It also has a large seating island which affords visitors less formal dining options. A large pantry and laundry facilities are also located behind the kitchen. Adjacent to the kitchen is a convenient wet bar with matching granite countertops, along with a bar sink, refrigerated wine storage and a small refrigerator. </p>
+      </div>
+    </div>
+
+    <div class="row m-4 text-content" >
+      <div class="seven cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Accessibility
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right w-100">x</div>
+          <p class="lead lead-smaller">
+          "...When one ventures up the Foyer stairs or rides up the elevator they find themselves in an exquisite formal living area...."
+          </p>
+        </div>
+      </div>
+      <div class="eight cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Appliances
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p class='lead lead-smaller'>
+          "...well appointed kitchen with stainless steel appliances..."
+          </p>
+        </div>
+      </div>
+      <div class="nine cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Prep & Range
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p>
+            "...six-burner range..."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-4">
+      <div class="col-sm pl-4 pr-4 pt-4 pb-1 text-content text-left">
+        <p>Using an open reverse floorplan to fully accentuate the coastal views and setting, the second floor is home to the massive Living room. This space is professionally decorated and tastefully designed with hardwood floors, coffered ceilings, custom moldings, a granite-surround fireplace, and glass-paned french doors offering access to the outdoor living spaces and the beach beyond. The recently remodeled 2nd floor deck provides magnificent views of the 12th and 15th holes on the nationally ranked Ocean Course, as well as expansive ocean and wildlife views. The beautiful deck features separate seating areas along with a beautiful outdoor dining area with night lighting and ceiling fans for those beautiful moonlit night ocean views.</p>
+      </div>
+    </div>
+
+    <div class="row m-4 text-content" >
+      <div class="ten cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Living View
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right w-100">x</div>
+          <p class="lead lead-smaller">
+          "...and glass-paned french doors offering access to the outdoor living spaces and the beach beyond..."
+          </p>
+        </div>
+      </div>
+      <div class="eleven cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Living Area
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p class='lead lead-smaller'>
+          "...as well as expansive ocean and wildlife views..."
+          </p>
+        </div>
+      </div>
+      <div class="twelve cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Wildlife
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p>
+            
+            "...as well as expansive ocean and wildlife views..."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-4">
+      <div class="col-sm pl-4 pr-4 pt-4 pb-1 text-content text-left">
+        <p>The second floor also includes the large Master Suite with its own sitting area off of the Living area, its own granite clad fireplace and luxurious leather chairs. This is a great place for morning coffee with the privacy of a true master suite and offers direct access to the balcony porch. The Master bedroom includes a beautifully appointed King size bed along with three built in closets. One ventures through to the large master bath with a jacuzzi tub, large glass shower with his and hers facilities.</p>
+      </div>
+    </div>
+
+    <div class="row m-4 text-content" >
+      <div class="thirteen cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Sitting Area
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right w-100">x</div>
+          <p class="lead lead-smaller">
+          "...own sitting area off of the Living area, its own granite clad fireplace and luxurious leather chairs..."
+          </p>
+        </div>
+      </div>
+      <div class="fourteen cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Morning Coffee
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p class='lead lead-smaller'>
+          "...This is a great place for morning coffee with the privacy of a true master suite and offers direct access to the balcony porch..."
+          </p>
+        </div>
+      </div>
+      <div class="fifteen cover-tile tile-image col-sm m-4" style="height:300px;">
+        <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+          Master Bedroom
+        </div>
+        <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+          <div class="text-right">x</div>
+          <p>
+            
+            "...The Master bedroom includes a beautifully appointed King size bed along with three built in closets. One ventures through to the large master bath with a jacuzzi tub, large glass shower with his and hers facilities...."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-4">
+      <div class="col-sm pl-4 pr-4 pt-4 pb-1 text-content text-left">
+        <p>Upstairs is the third floor game room and office with an even higher perspective of these magnificent views. The third level also includes a bonus room which can be used as an office as well as an extra sleeping area for guests. It has a beautiful sitting area, and workspace when not playing with the game tables. </p>
+      </div>
+    </div>
+
+    <div class="row m-4 text-content" >
+        <div class="sixteen cover-tile tile-image col-sm m-4" style="height:300px;">
+          <div class="lead text-description position-absolute fixed-bottom text-light text-center">
+            Lookout & Game Room
+          </div>
+          <div class="extra-information position-absolute h-100 w-100 bg-white m-0 p-4" style="z-index:9999;left:0;top:-100%;">
+            <div class="text-right w-100">x</div>
+            <p class="lead lead-smaller">
+            "...Upstairs is the third floor game room and office with an even higher perspective of these magnificent views..."
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <hr class="featurette-divider">
+
+    
+    <!-- START THE FEATURETTES -->
+
+    <div class="row featurette ml-4 mb-4">
+        <div class="col-sm-8">
+          <h2 class="featurette-heading mt-0">Villa <span class="text-muted">Details.</span></h2>
+          <p class="lead">a quick recap on the grounds.</p>
+        </div>
+        <div class="col-sm-4 text-right text-muted">
+          area details
+          <button onclick="toggleDetails()" style="border-width:1.5px;" type="button" class="btn btn-lg btn-outline-secondary ml-2 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+          </button>
+        </div>
+      </div>
+      <div class="d-none d-sm-none d-md-flex row text-left" >
+        <div class="col-sm border-right border-secondary">
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col-8">Bedrooms</div>
+                <div class="col-4" style="margin-left:-10px"> <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">5 </span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col-8">Kitchens</div>
+                <div class="col-4" style="margin-left:-10px"> <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">2</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col-8">Media Rooms</div>
+                <div class="col-4" style="margin-left:-10px"> <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">2</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm border-right border-secondary">
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col-7">Baths</div>
+                <div class="col-5" style="margin-left:-10px"> <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">5</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col-7">Half-Baths</div>
+                <div class="col-5" style="margin-left:-10px"> <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">2</span>  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col">Game Room</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col">Outdoor Grill</div>
+              </div>
+            </div>
+          </div>
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col">Outdoor Bath</div>
+              </div>
+            </div>
+          </div>
+          <div class="row ml-2">
+            <div class="col-sm ml-4">
+              <div class="row">
+                <div class="col">Pool & Hot Tub</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <ul class="d-sm-block d-md-none list-group list-group-sm m-4">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">5</span>
+            </div>
+            <div class="col-7 text-left">
+              Bedrooms 
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">2</span>
+            </div>
+            <div class="col-7 text-left">
+              Kitchens
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">2</span>
+            </div>
+            <div class="col-7 text-left">
+              Media Rooms
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">5</span>
+            </div>
+            <div class="col-7 text-left">
+              Baths
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">2</span>
+            </div>
+            <div class="col-7 text-left">
+              Half-Baths
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">1</span>
+            </div>
+            <div class="col-7 text-left">
+              Game Room
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">1</span>
+            </div>
+            <div class="col-7 text-left">
+              Outdoor Grill
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">1</span>
+            </div>
+            <div class="col-7 text-left">
+              Outdoor Bath
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-5 text-right">
+              <span class="badge badge-pill badge-light text-secondary" style="box-shadow:0 0 2px gray;">1</span>
+            </div>
+            <div class="col-7 text-left">
+              Pool & Hot Tub
+            </div>
+          </div>
+        </li>
+      </ul>
+  
+      <hr class="featurette-divider">
+  </div>
+
+  <div id="geo-details" class="container marketing">
+    <div class="row featurette ml-4 mb-4">
+      <div class="col">
+        <h2 class="featurette-heading mt-0">Area <span class="text-muted">Details.</span></h2>
+        <p class="lead">quick information of the local area.</p>
+      </div>
+      <div class="col text-right text-muted">
+        villa details <button onclick="toggleDetails()" style="border-width:1.5px;" type="button" class="btn btn-lg btn-outline-secondary ml-2 mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </button>
+      </div>
+    </div>
+    <div class="row m-4">
+      <div class="col-sm m-2 text-content" style="min-width:300px;background-image:url('../assets/pool-jacuzzi-outwards.jpg');">
+        <p class="mt-3 lead">
+          Features
+        </p>
+        <ul class="list-group mb-4">
+          <li class="list-group-item">
+            Walk minutes to the beautiful beach<br>
+            <small>Path from villa</small>
+          </li>
+          <li class="list-group-item">
+            Perched between the 12th/13th greens<br>
+            <small>Golf reservations available <a href="https://bookit.activegolf.com/book-kiawah-resort-public-tee-times/810">here</a></small>
+          </li>
+          <li class="list-group-item">
+            Quick drive to OceanCourse club house<br>
+            <small>Dining reservations available <a href="https://kiawahresort.com/dining/">here</a></small>
+          </li>
+          <li class="list-group-item">
+            Exclusive third gate community<br>
+            <small>Privacy is guaranteed</small>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm m-2" style="min-width:300px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.7221290142054!2d-80.03894962725427!3d32.61224517070915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fdd469a1886905%3A0x633e4eec75d31511!2s15+Ocean+Course+Dr%2C+Kiawah+Island%2C+SC+29455!5e1!3m2!1sen!2sus!4v1551221567176" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="row m-4">
+        <div class="col-sm text-center mt-2">
+          <h2 class="text-center">Wider Area</h2>
+        </div>
+      </div>
+      <div class="row m-4">
+        <div class="col-sm pl-4 pr-4 pt-4 pb-1 text-content text-left" >
+          <h3>Visit Charleston</h3>
+          <blockquote class="blockquote">
+          <small>
+          <p>Charleston is the oldest and largest city in the U.S. state of South Carolina, the county seat of Charleston County, and the principal city in the Charleston–North Charleston–Summerville Metropolitan Statistical Area. The city lies just south of the geographical midpoint of South Carolina's coastline and is located on Charleston Harbor, an inlet of the Atlantic Ocean formed by the confluence of the Ashley, Cooper, and Wando rivers</p>
+          <p>Known for its rich history, well-preserved architecture, distinguished restaurants, and hospitable people, Charleston is a popular tourist destination. It has received numerous accolades, including "America's Most Friendly [City]" by Travel + Leisure in 2011 and in 2013 and 2014 by Condé Nast Traveler, and also "the most polite and hospitable city in America" by Southern Living magazine. In 2016, Charleston was ranked the "World's Best City" by Travel + Leisure.</p>
+          <footer class="blockquote-footer">Wikipedia</footer>
+          </small>
+          </blockquote>
+          <div class="row">
+            <div class="col" style="min-width:170px;">
+              <p>Charleston, located north of Kiawah Island, can provide an entire day of tours attraction for all types of guests. Here is a quick sampling of those experiences: <br>
+                <br><a href="https://www.charlestoncvb.com/plan-your-trip/tours-attractions~204/">Tours & Attractions</a>
+                <br><a href="https://www.charlestoncvb.com/plan-your-trip/shopping~205/">Shopping Experiences</a>
+                <br><a href="https://www.charlestoncvb.com/plan-your-trip/beauty-and-spas~224/">Beauty & Spa Treatments</a>
+              </p>
+              <small>View more information about the storied and lovely city of Charleston <a href="https://www.charlestoncvb.com/">here</a></small>
+            </div>
+            <div class="col" style="min-width:300px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d214880.8491640288!2d-80.18185712077428!3d32.69898633023184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x88fdd469a1886905%3A0x633e4eec75d31511!2s15+Ocean+Course+Dr%2C+Kiawah+Island%2C+SC+29455!3m2!1d32.6124779!2d-80.0382324!4m5!1s0x88fe7a42dca82477%3A0x35faf7e0aee1ec6b!2sCharleston%2C+SC!3m2!1d32.7764749!2d-79.9310512!5e0!3m2!1sen!2sus!4v1551724742856" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; OceanView Kiawah LLC 2019. &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
+  </footer>
+</main>
+</body>
+</html>
+

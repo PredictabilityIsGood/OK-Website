@@ -1,0 +1,473 @@
+:root {
+    --background-color:hsla(0,0%,100%,.8)!important;
+    --font-family: 'Raleway', sans-serif !important;
+}
+.bg-oceanview {
+    background-color:var(--background-color)!important;
+}
+
+.nav-oceanview {
+    background-color:var(--background-color)!important;
+    box-shadow:1px 1px 2px lightgray !important;
+}
+.text-oceanview-primary{
+    font-family: var(--font-family);
+}
+#header-nav .nav-item.active .nav-link{
+    color:#006400!important;
+}
+#header-nav .nav-item .nav-link:hover{
+    color:#006400!important;
+    text-decoration:underline;
+}
+#header-nav .nav-item .nav-link{
+    font-size:.9rem;
+    font-weight:300;
+}
+.popout-img{
+    -webkit-transition: all .6s; /* Safari prior 6.1 */
+    transition: all .6s;
+    cursor:pointer;
+}
+.popout-img:hover{
+    box-shadow:0 0 5px black;
+}
+.popout-img.active{
+    -webkit-transition: all .6s; /* Safari prior 6.1 */
+    transition: all .6s;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:black;
+    z-index:99999999;
+}
+.popout-img.active img{
+    -webkit-transition: all .6s; /* Safari prior 6.1 */
+    transition: all .6s;
+    position:absolute;
+    left:50%;
+    top:50%;
+    z-index:99999999;
+}
+
+.villa-pointer {
+    transition:all .5s;
+    right:22%;
+    bottom:-80%;
+    width:130px;
+    height:30px;
+    position:absolute;
+    background-color:rgba(248,249,250,.7);
+    border:1px solid gray;
+    box-shadow:0 0 5px black;
+    cursor:pointer;
+    border-radius:5px;
+    opacity:0;
+}
+  
+.course-pointer {
+transition:all .5s;
+right:30%;
+bottom:-40%;
+width:130px;
+height:30px;
+position:absolute;
+background-color:rgba(248,249,250,.7);
+border:1px solid gray;
+box-shadow:0 0 5px black;
+cursor:pointer;
+border-radius:5px;
+opacity:0;
+}
+
+.show-villa {
+transition:all .5s;
+opacity:1;
+}
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgba(23, 162, 184, .7); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgba(23, 162, 184, 1);
+}
+.fade-out-story{
+transition:all 1s;
+transform:scale(0.1);
+opacity:0;
+margin-left:-50%;
+margin-top:60%;
+}
+
+.mobile-style{
+width:98% !important;
+left:1% !important;
+margin:0 !important;
+padding:0 !important;
+padding-top:1rem !important;
+padding-bottom:1rem !important;
+}
+.mobile-style .about-close-button{
+right:-14px;
+}
+.resume-journey{
+position:fixed;
+bottom:0;
+left:0;
+padding:.25rem;
+background-color:rgba(248,249,250,.7) !important;
+border-top-right-radius:5px;
+box-shadow:0 0 5px gray;
+}
+.about{
+height:100%;
+width:100%;
+position:absolute;
+}
+.banner{
+z-index:-1;
+background:url('/assets/media/overlook.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position:center;
+}
+
+.mx-150{
+max-width:145px;
+}
+
+.banner-details{
+z-index:-1;
+background:url('/assets/media/about-banner-2.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position:center;
+}
+.about-content{
+
+background-color:rgba(248,249,250,.7) !important;
+position:absolute;
+width:350px;
+right:0; 
+top:8rem;
+border-radius:2px;
+}
+
+.about-full-content{
+transition:all .8s;
+background-color:rgba(248,249,250,.7) !important;
+position:fixed;
+width:90%;
+height:85%;
+left:5%;
+top:15%;
+box-shadow:0 0 5px gray;
+}
+.about-full-content-panel{
+width:100%;
+max-height:100%;
+position:relative;
+overflow:auto;
+}
+.about-close-button{
+position:absolute;
+top:0;
+right:0;
+cursor:pointer;
+}
+.banner-blocking{
+    width:100%;
+    height:200%;
+    position:relative;
+}
+.master-bedroom{
+    background:url('/assets/media/master-bedroom.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+.text-content{
+    background-color: rgba(248,249,250,.7);
+    box-shadow: 0 0 4px lightgray;
+}
+.cover {
+    background-attachment: scroll !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+.cover-tile {
+    background-size:cover !important;
+    background-position:center !important;
+}
+/*.fadedScroller:after {
+    content:'';
+    bottom:0;
+    left: 0;
+    height: 75px;
+    right: 0;
+    position: absolute;
+}*/
+.text-description {
+background-color:rgba(23, 162, 184, .7)!important;
+}
+
+.extra-information {
+opacity:.8;
+z-index:999;
+left:0;
+top:-100%;
+-webkit-transition:all .2s;
+transition:all .2s;
+-webkit-transition-timing-function:ease-in-out;
+transition-timing-function:ease-in-out;
+}
+.extra-information-active {
+top:0 !important;
+-webkit-transition:all .2s;
+transition:all .2s;
+-webkit-transition-timing-function:ease-in-out;
+transition-timing-function:ease-in-out;
+}
+
+
+.tile-image{
+box-shadow:0 0 2px lightgray;
+-webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
+filter: grayscale(20%);
+overflow:hidden;
+cursor:pointer;
+min-width:250px;
+
+-webkit-transition:all .2s;
+transition:all .2s;
+-webkit-transition-timing-function:ease-in-out;
+transition-timing-function:ease-in-out;
+}
+.tile-image:hover{
+box-shadow:0 0 5px gray;
+-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+filter: grayscale(0%);
+
+-ms-transform: scale(1.05, 1.05); /* IE 9 */
+-webkit-transform: scale(1.05, 1.05); /* Safari */
+transform: scale(1.05, 1.05);
+
+-webkit-transition:all .2s;
+transition:all .2s;
+-webkit-transition-timing-function:ease-in-out;
+transition-timing-function:ease-in-out;
+}
+
+.list-group-sm .list-group-item{
+padding-left:.1rem !important;
+padding-right:.1rem !important;
+padding-top:.5rem !important;
+padding-bottom:.5rem !important;
+background-color:rgba(255,255,255,.6) !important;
+}
+
+
+.one {
+    background-image: url("/assets/media/contact-banner.jpg");
+}
+
+.two {
+    background-image: url("/assets/media/compressed/house-entrance.jpg");
+}
+
+.three {
+    background-image: url("/assets/media/compressed/foyer-chandelier.jpg");
+}
+
+.four {
+    background-image: url("/assets/media/pool-jacuzzi-outwards.jpg");
+}
+
+.five {
+    background-image: url("/assets/media/compressed/house-kiawah-golfers.jpg");
+}
+
+.six {
+    background-image: url("/assets/media/about-banner-2.jpg");
+}
+
+.seven {
+    background-image: url("/assets/media/compressed/house-accessibility-elevator.jpg");
+}
+
+.eight {
+    background-image: url("/assets/media/compressed/kitchen-amenities-1.jpg");
+}
+
+.nine {
+    background-image: url("/assets/media/compressed/kitchen-appliances-2.jpg");
+}
+
+.ten {
+    background-image: url("/assets/media/compressed/living-room-view.jpg");
+}
+
+.eleven {
+    background-image: url("/assets/media/compressed/living-2-60.jpg");
+}
+
+.twelve {
+    background-image: url("/assets/media/compressed/wildlife-crocodile.jpg");
+}
+
+.thirteen {
+    background-image: url("/assets/media/compressed/bedroom-mst-sitting.jpg");
+}
+
+.fourteen {
+    background-image: url("/assets/media/compressed/bedroom-mst-study.jpg");
+}
+
+.fifteen {
+    background-image: url("/assets/media/compressed/bedroom-mst-perspective.jpg");
+}
+.sixteen {
+    background-image: url("/assets/media/compressed/partial-gameroom.jpg");
+}
+.seventeen {
+    background-image: url("/assets/media/compressed/partial-gameroom.jpg");
+}
+.eighteen {
+    background-image: url("/assets/media/compressed/partial-gameroom.jpg");
+}
+
+.lead-smaller{
+    font-style:italic;
+    font-size:1.1em;
+}
+
+#main-img{
+    background: url('/assets/media/villa-banner.jpg') no-repeat center center fixed; 
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#comfort-img{
+    background: url('/assets/media/compressed/house-comfort-shot.jpg') no-repeat center center fixed; 
+}
+
+#moss-img{
+    background: url('/assets/media/compressed/house-spanish-moss.jpg') no-repeat center center fixed; 
+}
+
+#atrium-img {
+    background: url('/assets/media/compressed/foyer-chandelier.jpg') no-repeat center center fixed; 
+}
+
+#pool-jacuzzi-img {
+    background: url('/assets/media/pool-jacuzzi-outwards.jpg') no-repeat center center fixed; 
+}
+
+#jacuzzi-bedroom-img {
+    background: url('/assets/media/compressed/bedroom-sw-direct.jpg') no-repeat center center fixed; 
+}
+
+#southeast-bedroom-img {
+    background: url('/assets/media/compressed/bedroom-se-perspective.jpg') no-repeat center center fixed; 
+}
+
+#northeast-bedroom-img {
+    background: url('/assets/media/compressed/bedroom-ne-perspective.jpg') no-repeat center center fixed; 
+}
+
+#master-bedroom-img {
+    background: url('/assets/media/compressed/bedroom-mst-perspective.jpg') no-repeat center center fixed; 
+}
+#master-bath-img {
+    background:url('/assets/media/compressed/bedroom-mst-bath-2.jpg')
+}
+#master-bath-2-img {
+    background:url('/assets/media/compressed/bedroom-mst-bath-1.jpg')
+}
+#master-dresser-img {
+    background: url('/assets/media/compressed/bedroom-mst-dresser.jpg') no-repeat center center fixed; 
+}
+
+#master-study-img {
+    background: url('/assets/media/study-fireplace.png') no-repeat center center fixed; 
+}
+#dining-img {
+    background: url('/assets/media/compressed/dining-room-perspective.jpg') no-repeat center center fixed; 
+}
+#first-living-img{
+    background: url('/assets/media/compressed/living-room-first-normal.jpg') no-repeat center center fixed; 
+}
+#twin-img{
+    background: url('/assets/media/compressed/bedroom-nw-perspective.jpg') no-repeat center center fixed; 
+}
+#dresser-img{
+    background: url('/assets/media/compressed/bedroom-mst-dresser.jpg') no-repeat center center fixed; 
+}
+#water-img{
+    background: url('/assets/media/pool-jacuzzi-outwards.jpg') no-repeat center center fixed; 
+}
+#contact-img{
+    background: url('/assets/media/contact-banner.jpg') no-repeat center center fixed; 
+}
+#booking-img{
+    background: url('/assets/media/compressed/house-spanish-moss.jpg') no-repeat center center fixed; 
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+}
+.remove-scroll{
+    overflow:hidden;
+}
+.smaller{
+    font-size:.8rem;
+    font-weight:200;
+}
+.skinny {
+    font-weight: 200;
+}
+
+@media (max-width:768px){
+    .carousel-caption h1 {
+        font-size:1.5rem !important;
+        margin-bottom:0;
+    }
+    .carousel-caption p{
+        margin-bottom:0;
+    }
+    .carousel-caption{
+        padding-bottom:0;
+    }
+}

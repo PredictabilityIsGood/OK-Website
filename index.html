@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ryan Montgomery">
+    <title>OceanView Kiawah</title>
+
+    <meta property="og:title" content="The Next Destination" />
+    <meta property="og:image" content="https://oceanviewkiawah.com/assets/media/villa-banner.jpg" />
+    <link rel="icon" href="/favicon.ico">
+
+    <!--#include virtual="assets/includes/main-links.html" -->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link href="/assets/css/carousel.css" rel="stylesheet">
+    <link href="/assets/css/theme.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+
+</head>
+<body class="text-oceanview-primary">
+<header id="header-frame">
+  <nav id="header-nav" class="navbar navbar-expand-md navbar-light fixed-top bg-oceanview nav-oceanview">
+    <a class="navbar-brand lead skinny" href="/">OceanView <small class="ml-2 smaller">Pristine Villa Experiences</small></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="/">experience<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">journey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/booking">booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">contact</a>
+            </li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    var video;
+    function sizeHead(){
+      var height=$("#header-nav").outerHeight();
+      var ratio = video.videoHeight/video.videoWidth;
+      var wratio = window.innerHeight/window.innerWidth;
+      if(ratio>wratio){
+        $(video).attr("width",window.innerWidth)
+        $(video).attr("height","auto")
+        $(video).attr("style","left:0;top:50%;margin-top:-"+(window.innerWidth*ratio)/2+"px;");
+      }
+      else{
+        $(video).attr("width","auto")
+        $(video).attr("height",window.innerHeight);
+        $(video).attr("style","left:50%;top:0;margin-left:-"+($(video).width()==0?$(video).height()/ratio:$(video).width())/2+"px;");
+      }
+      //$("#header-frame").attr("style","min-height:"+height+"px;height:"+height+"px;");
+      $("#myCarousel").attr("style","height:"+(window.innerHeight)+"px;")
+    }
+    $(function(){
+      
+      $("#myCarousel").carousel({
+        interval:false
+      });
+
+      setTimeout(function(){
+        video = document.getElementById("main-cover");
+
+        video.play().then(function(){
+          sizeHead();
+          setTimeout(function(){
+            sizeHead();
+          },50)
+          /*
+          //$("#sound-toggle").click();
+          setTimeout(function(){
+            flip();
+          },134000);*/
+          
+        })
+      },100);
+      $(".popout-img").on("click",function(event){
+        $(this).toggleClass("active");
+
+        var picture = $(this).find("img")[0];
+        !$(this).hasClass("active") ? $(picture).attr("style","") : $(picture).attr("style","margin-top:-"+$(picture).height()/2+"px;margin-left:-"+$(picture).width()/2+"px;");
+      })
+
+    });
+    $(window).resize(function(){
+        sizeHead();
+    });
+  </script>
+</header>
+
+
+<main role="main">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner h-100">
+      <div id="banner-video" class="carousel-item h-100 active">
+        <div class="row h-100 mr-0 ml-0">
+          <div id="main-cover-wrapper" class="position-relative w-100 h-100" style="top:0;left:0;">
+            <video id="main-cover" class="position-absolute" style="width:100%;height:100%;" muted autoplay playsinline loop>
+              <source src="assets/media/kiawah-promo-full.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="position-absolute p-2" style="bottom:2.5em;width:100%;text-align:center;">
+              <button style="z-index:2000" id="sound-toggle" type="button" class="btn btn-sm btn-outline-light " onclick="video.muted=!video.muted;" >
+                sound
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="comfort-img" class="carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>The vacation we often need is freedom from our own mind.</h1>
+            <p>Jack Adam Weber</p>
+          </div>
+        </div>
+      </div>
+      <div id="moss-img" class="carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1>An idea is salvation by imagination.</h1>
+            <p>Frank Lloyd Wright.</p>
+          </div>
+        </div>
+      </div>
+      <div id="dresser-img" class="carousel-item h-100">
+        <div class="container">
+          <div class="carousel-caption text-right">
+            <h1></h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <style>
+      
+    </style>
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">Up next. <span class="text-muted">You're view.</span></h2>
+        <p class="lead">Multiple floor view of the prolificly manicured Ocean Course.</p>
+      </div>
+      <div class="col-md-6">
+          <div class="popout-img" style="width:100%">
+            <img width="100%" height="auto" src="assets/media/compressed/house-overlook.jpg"/>
+          </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6 order-md-2">
+        <h2 class="featurette-heading">Welcoming. <span class="text-muted">Start to finish.</span></h2>
+        <p class="lead">The picturesque and flowing landscape is enough to move anyone to their state of bliss.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="popout-img" style="width:100%">
+          <img width="100%" height="auto" src="assets/media/pool-jacuzzi-outwards.jpg"/>
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-6">
+        <h2 class="featurette-heading">Beach Access. <span class="text-muted">In Minutes.</span></h2>
+        <p class="lead">A quick winding path through the golf course to the beach.</p>
+      </div>
+      <div class="col-md-6">
+          <div class="popout-img" style="width:100%">
+            <img width="100%" height="auto" src="assets/media/about-banner-2.jpg"/>
+          </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+  </div>
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; OceanView Kiawah LLC 2019. &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
+  </footer>
+</main>
+</body>
+</html>
+
