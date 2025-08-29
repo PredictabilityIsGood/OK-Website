@@ -66,11 +66,7 @@
       //$("#header-frame").attr("style","min-height:"+height+"px;height:"+height+"px;");
       $("#myCarousel").attr("style","height:"+(window.innerHeight)+"px;")
     }
-    function enableAudioOnce() {
-      video.muted = false;
-      // remove all listeners after first real gesture
-      GESTURES.forEach(e => document.removeEventListener(e, enableAudioOnce, true));
-    }
+    
     $(function(){
       
       $("#myCarousel").carousel({
@@ -90,7 +86,11 @@
           const GESTURES = ["pointerdown", "click", "keydown", "touchstart", "wheel", "mousemove"];
           
           
-          
+          const enableAudioOnce = () => {
+            video.muted = false;
+            // remove all listeners after first real gesture
+            GESTURES.forEach(e => document.removeEventListener(e, enableAudioOnce, true));
+          }
           // capture phase improves reliability with nested elements
           GESTURES.forEach(e => document.addEventListener(e, enableAudioOnce, { once: true, capture: true }));
           
