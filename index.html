@@ -71,13 +71,18 @@
     function init(){
       // All gesture events that count as a user interaction
       const GESTURES = ["pointerdown", "click", "keydown", "touchstart", "wheel", "mousemove"];
-      const enableAudioOnce = () => {
-        video.muted = false;
-        // remove all listeners after first real gesture
-        GESTURES.forEach(e => document.removeEventListener(e, enableAudioOnce, true));
+
+      const firstContact = () => {
+        const enableAudioOnce = () => {
+          video.muted = false;
+          // remove all listeners after first real gesture
+          GESTURES.forEach(e => document.removeEventListener(e, enableAudioOnce, true));
+        }
+        // capture phase improves reliability with nested elements
+        GESTURES.forEach(e => document.addEventListener(e, enableAudioOnce, { once: true, capture: true }));
+        GESTURES.forEach(e => document.removeEventListener(e, firstContact);
       }
-      // capture phase improves reliability with nested elements
-      GESTURES.forEach(e => document.addEventListener(e, enableAudioOnce, { once: true, capture: true }));
+      GESTURES.forEach(e => document.addEventListener(e, firstContact);
     }
     
     $(function(){
