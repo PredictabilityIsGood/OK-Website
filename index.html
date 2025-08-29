@@ -80,11 +80,18 @@
           setTimeout(function(){
             sizeHead();
           },50)
-          /*
-          //$("#sound-toggle").click();
-          setTimeout(function(){
-            flip();
-          },134000);*/
+      
+          // All gesture events that count as a user interaction
+          const GESTURES = ["pointerdown", "click", "keydown", "touchstart", "wheel", "mousemove"];
+          
+          const enableAudioOnce => () {
+            video.muted = false;
+            // remove all listeners after first real gesture
+            GESTURES.forEach(e => document.removeEventListener(e, enableAudioOnce, true));
+          }
+          
+          // capture phase improves reliability with nested elements
+          GESTURES.forEach(e => document.addEventListener(e, enableAudioOnce, { once: true, capture: true }));
           
         })
       },100);
@@ -99,20 +106,6 @@
     $(window).resize(function(){
         sizeHead();
     });
-
-    const vid = document.getElementById("main-cover");
-
-    // All gesture events that count as a user interaction
-    const GESTURES = ["pointerdown", "click", "keydown", "touchstart", "wheel", "mousemove"];
-    
-    function enableAudioOnce() {
-      vid.muted = false;
-      // remove all listeners after first real gesture
-      GESTURES.forEach(e => document.removeEventListener(e, enableAudioOnce, true));
-    }
-    
-    // capture phase improves reliability with nested elements
-    GESTURES.forEach(e => document.addEventListener(e, enableAudioOnce, { once: true, capture: true }));
 
   </script>
 </header>
