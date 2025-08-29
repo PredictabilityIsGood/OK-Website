@@ -99,6 +99,21 @@
     $(window).resize(function(){
         sizeHead();
     });
+
+    const vid = document.getElementById("main-cover");
+
+    // All gesture events that count as a user interaction
+    const GESTURES = ["pointerdown", "click", "keydown", "touchstart", "wheel", "mousemove"];
+    
+    function enableAudioOnce() {
+      vid.muted = false;
+      // remove all listeners after first real gesture
+      GESTURES.forEach(e => document.removeEventListener(e, enableAudioOnce, true));
+    }
+    
+    // capture phase improves reliability with nested elements
+    GESTURES.forEach(e => document.addEventListener(e, enableAudioOnce, { once: true, capture: true }));
+
   </script>
 </header>
 
@@ -115,7 +130,7 @@
       <div id="banner-video" class="carousel-item h-100 active">
         <div class="row h-100 mr-0 ml-0">
           <div id="main-cover-wrapper" class="position-relative w-100 h-100" style="top:0;left:0;">
-            <video id="main-cover" class="position-absolute" style="width:100%;height:100%;" muted autoplay playsinline loop>
+            <video id="main-cover" class="position-absolute" style="width:100%;height:100%;" muted volume=".6" autoplay playsinline loop>
               <source src="https://www.googleapis.com/drive/v3/files/1J27VC03A6TViiadrJkwVLSqmseJfeqQt?alt=media&key=AIzaSyB_6d7bfkXJuor2i0nsG32OCJY8lw5-wSA" type="video/mp4">
               Your browser does not support the video tag.
             </video>
